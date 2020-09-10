@@ -1,0 +1,130 @@
+.login-page {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #b9e3fc, #0075c5);
+  overflow: hidden;
+
+  :global {
+    .ant-spin-nested-loading {
+      position: relative;
+      z-index: 10;
+      margin-top: -150px;
+      box-shadow: 3px 3px 5px #555;
+      border-radius: 10px;
+
+      .ant-spin-container {
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.login-box {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: 10px;
+  width: 560px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div.line {
+    width: 1px;
+    background: linear-gradient(rgba(0, 0, 0, .01), rgba(0, 0, 0, .6), rgba(0, 0, 0, .01));
+    margin: 0 30px;
+  }
+
+  div.login-box-left {
+    padding: 0 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      height: 55px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin: 0;
+      color: #333;
+      font-weight: normal;
+      // text-shadow: 2px 2px 3px #ccc;
+    }
+  }
+
+  form {
+    width: 360px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+
+    :global {
+      .ant-form-item {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .auto-login {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+
+    .login-btn {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    .login-tip {
+      width: 240px;
+      text-align: center;
+      font-size: 10px;
+      color: #888888;
+    }
+
+    .other-brow {
+      color: #1da57a;
+      font-size: 10px;
+      height: 16px;
+      line-height: 16px;
+      cursor: pointer;
+
+      &:hover {
+        color: #3db389;
+        border-bottom: 1px solid #3db389;
+      }
+
+    }
+  }
+}
+
+.code-input {
+  :global {
+    .ant-input-group-addon {
+      padding: 0;
+      border: none;
+    }
+    button {
+      border: none;
+      color: #fff;
+      min-width: 60px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .ant-btn:hover, .ant-btn:focus {
+      color: rgb(233, 231, 231);
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.home-page {
+  background-color: #f0f4f8;
+
+  .page-main {
+    padding: 10px;
+  }
+
+  .welcome{
+    padding:10px 10px;
+    h3{
+      font-size:30px;
+      color:#111;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+  }
+
+  .page-nav-list {
+    padding: 20px;
+    background-color: #fff;
+
+    h3{
+      color:#111;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+
+      & > a {
+        position: relative;
+        width: 20%;
+        background-color: #f8f8f8;
+        border: 5px solid #fff;
+        padding: 12px 20px 12px 48px;
+        text-align: left;
+        color: #333;
+        transition: all 0.4s;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+
+        & > i.icon {
+          color: #444;
+          position: absolute;
+          width: 28px;
+          height: 28px;
+          border: 1px solid #ccc;
+          border-radius: 50%;
+          left: 10px;
+          top: 50%;
+          margin-top: -14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-style: normal;
+          overflow: hidden;
+          font-size: 20px;
+          line-height: 1;
+
+        }
+
+        &:hover {
+          color:#111;
+          background-color: #f0f0f0;
+
+          & > i.icon {
+            color: #fff;
+            border-color: rgba(255, 136, 0, 0.5);
+            background-color: rgba(255, 136, 0, 0.5);
+          }
+          &:after{
+            content:'';
+            position: absolute;
+            bottom:0;
+            left:0;
+            right:0;
+            height:1px;
+            border-bottom:1px solid rgba(255, 136, 0, 0.5);
+          }
+        }
+      }
+    }
+
+  }
+}

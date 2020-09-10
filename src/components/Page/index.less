@@ -1,0 +1,128 @@
+// @import "../../utils/variable.less";
+
+@page-prefix-cls: ~"page-wrapper";
+@page-header-operation-prefix: ~"page-header-operation";
+
+.@{page-prefix-cls} {
+  overflow: hidden;
+  align-items: center;
+}
+
+.@{page-prefix-cls}-header {
+  border-bottom: 1px solid #e2e2e2;
+  background: #fff;
+  height: auto !important;
+  padding: 0 10px;
+  -webkit-app-region: drag;
+  //background-color: #fcfcfc;
+
+  .@{page-prefix-cls}-header-title {
+    // padding-left: 20px;
+    padding-bottom: 5px;
+
+    &>h1 {
+      font-size: 18px;
+      margin-top: 5px;
+      margin-bottom: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 500px;
+    }
+
+    .ant-breadcrumb {
+      color: #aaa;
+      font-weight: 300;
+      display: inline-block;
+
+      &>span:last-child {
+        color: #999;
+      }
+    }
+
+    .anticon.anticon-heart {
+      color: #93cc93;
+      margin-right: 5px;
+      font-size: 10px;
+    }
+  }
+}
+
+
+.@{page-prefix-cls}-header-main {
+  padding: 0 2em;
+}
+
+.@{page-prefix-cls}-main {
+  //padding: 10px;
+  overflow-y: auto;
+
+  &>div {
+
+    //overflow-y: auto;
+    //height: 100%; // 这个系统有BUG
+    &.ant-spin.ant-spin-spinning {
+      width: 100%;
+      position: relative;
+
+      .ant-spin-dot {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -25px 0 0 -25px;
+      }
+    }
+
+    &>.ant-spin-container {
+      height: 100%;
+      background-color: #f8f8f8;
+
+      &>.ant-form-horizontal {
+        height: 100%;
+      }
+
+      &>div,
+      &>section,
+      &>form {
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+        padding: 10px;
+        width: 100%;
+        max-width: 100%;
+
+      }
+    }
+  }
+}
+
+.@{page-header-operation-prefix}-switch-menu {
+  display: inline-block;
+  margin-left: 1em;
+  padding: 0 1em;
+  line-height: 30px;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+
+  &>li>div.ant-menu-submenu-title {
+    padding: 0 10px;
+  }
+
+  .ant-menu-item-group-title {
+    width: 100%;
+    display: inline-block !important;
+  }
+}
+
+.page-header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .page-header-right-operations {
+    button {
+      height: 28px;
+      padding: 0 10px;
+    }
+  }
+}

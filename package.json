@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "test": "umi test",
+    "lint": "eslint {src,mock,tests}/**/*.{ts,tsx} --fix",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "dva-model": "^2.4.1",
+    "particles.js": "^2.0.0",
+    "qs": "^6.9.4"
+  },
+  "devDependencies": {
+    "@ant-design/pro-layout": "^5.0.12",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.2.6",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "umi": "^3.2.6",
+    "yorkie": "^2.0.0"
+  },
+  "create-bugu": {
+    "ignore": [
+      ".git",
+      "create-umi"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  }
+}

@@ -1,0 +1,144 @@
+:global {
+  .list-page-main {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100%;
+
+    .list-table-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.list-page {
+
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  & > header {
+    & > .list-header-items {
+      flex-shrink: 0;
+      min-height: 40px;
+      background-color: #f0f0f0;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      //justify-content: center;
+      justify-content: stretch;
+      padding: 0 10px;
+      position: relative;
+      z-index: 1;
+
+      & > div {
+        font-weight: bold;
+        padding: 5px 8px;
+        min-height:40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: default;
+        &>span{
+          :global(.anticon){
+            margin-left: 0.5em;
+            &.filtered{
+              color:@primary-color;
+            }
+          }
+        }
+        &:hover{
+          background-color: rgba(0, 0, 0, .05);
+        }
+      }
+    }
+
+    position: relative;
+    z-index: 1;
+  }
+
+  & > main {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: -1px;
+    padding: 0 10px;
+    position: relative;
+    z-index: 0;
+
+    & > ul {
+      & > li {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #eee;
+        align-items: center;
+        //justify-content: center;
+        justify-content: stretch;
+        flex-wrap: nowrap;
+
+        &:nth-child(2n+1) {
+          background-color: rgba(0, 0, 0, .01);
+        }
+
+        &:hover {
+          background-color: rgba(76,150,137,0.1)
+        }
+
+        & > div {
+          padding: 10px 8px;
+          //flex-shrink: 0;
+
+
+        }
+      }
+    }
+  }
+
+  & > footer {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    background-color: #f8f8f8;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.filter-popover {
+  :global(.ant-popover-inner-content) {
+    padding: 0;
+
+    .filter-box {
+      :global {
+        .ant-radio-group {
+          display: block;
+          padding:8px;
+          .ant-radio-wrapper {
+            display: block;
+            padding: 8px 0;
+          }
+        }
+
+        .ant-btn-group {
+          display: flex;
+
+          .ant-btn {
+            flex: 1;
+            &:first-child{
+              border-top-left-radius: 0;
+            }
+            &:last-child{
+              border-top-right-radius: 0;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
